@@ -74,6 +74,16 @@ def main():
         if not sl:
             break
         #10print("Eponential of {} is {}!".format(name, exp))
+        print("Values inputted are")
+        print()
+        print("Sepal Length : ", sl)
+        print()
+        print("Sepal Width  : ", sw)
+        print()
+        print("Petal Length : ", pl)
+        print()
+        print("Petal Width  : ", pw)
+        print()
         print("Predictior says the flower type is", type)
         print()
         proceed = input("Do you wish to continue : ")
