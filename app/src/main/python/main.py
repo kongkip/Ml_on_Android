@@ -23,28 +23,28 @@ def main():
             try:
                 sl = eval(input('sepal length (cm) : '))
             except Exception as e:
-                print("Please Enter and Interger of Float")
+                print("Please Enter and Interger or Float")
                 break
             print("*"*20)
 
             try:
                 sw = eval(input('sepal width (cm) : '))
             except Exception as e:
-                print("Please Enter and Interger of Float")
+                print("Please Enter and Interger or Float")
                 break
             print("*"*20)
 
             try:
                 pl = eval(input('petal length (cm) : '))
             except Exception as e:
-                print("Please Enter and Interger of Float")
+                print("Please Enter and Interger or Float")
                 break
             print("*"*20)
 
             try:
                 pw = eval(input('petal width (cm): '))
             except Exception as e:
-                print("Please Enter and Interger of Float")
+                print("Please Enter and Interger or Float")
                 break
             print("*"*20)
 
