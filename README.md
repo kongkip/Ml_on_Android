@@ -12,4 +12,9 @@ This is an example of an interactive Python console script running in an Android
   [`app/build.gradle`](https://github.com/chaquo/chaquopy-console/blob/master/app/build.gradle).
 # Ml_on_Android
 
+This demo shows iris example on android, it both includes training and inference
+
 ![demo](https://github.com/kongkip/Ml_on_Android/blob/master/video/demo.gif)
+
+
+Credits goes to [Chaquo](https://github.com/chaquo) I merely created a wrapper.
