@@ -1,8 +1,16 @@
 from six.moves import input
 import numpy as np
+from os.path import dirname, join
 
+
+#import joblib
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
+
+import warnings
+warnings.filterwarnings('ignore')
+
+from sklearn.externals import joblib
 
 def main():
 
@@ -12,23 +20,44 @@ def main():
     print("=="*20)
     while True:
         try:
-            sl = eval(input('sepal length (cm) : '))
+            try:
+                sl = eval(input('sepal length (cm) : '))
+            except Exception as e:
+                print("Please Enter and Interger of Float")
+                break
             print("*"*20)
-            sw = eval(input('sepal width (cm) : '))
+
+            try:
+                sw = eval(input('sepal width (cm) : '))
+            except Exception as e:
+                print("Please Enter and Interger of Float")
+                break
             print("*"*20)
-            pl = eval(input('petal length (cm) : '))
+
+            try:
+                pl = eval(input('petal length (cm) : '))
+            except Exception as e:
+                print("Please Enter and Interger of Float")
+                break
             print("*"*20)
-            pw = int(input('petal width (cm): '))
+
+            try:
+                pw = eval(input('petal width (cm): '))
+            except Exception as e:
+                print("Please Enter and Interger of Float")
+                break
             print("*"*20)
 
 
-            data = load_iris()
+            #data = load_iris()
 
-            x = data["data"]
-            y = data["target"]
+            #x = data["data"]
+            #y = data["target"]
 
-            clf = LogisticRegression(multi_class="ovr", solver="lbfgs")
-            clf.fit(x, y)
+            #clf = LogisticRegression(multi_class="ovr", solver="lbfgs")
+            #clf.fit(x, y)
+            file = join(dirname(__file__),"clf.pkl")
+            clf = joblib.load(file)
 
             new = np.array([sl, sw, pl, pw]).reshape(1,-1)
             pred = clf.predict(new)
@@ -45,6 +74,14 @@ def main():
         if not sl:
             break
         #10print("Eponential of {} is {}!".format(name, exp))
-        print("Prediction says the flower type Is", type)
-        break
+        print("Predictior says the flower type is", type)
+        print()
+        proceed = input("Do you wish to continue : ")
 
+        if proceed == "yes":
+            continue
+
+        elif proceed == "y":
+            continue
+        else:
+            break
