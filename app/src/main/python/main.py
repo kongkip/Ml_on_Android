@@ -46,6 +46,5 @@ def main():
             break
         #10print("Eponential of {} is {}!".format(name, exp))
         print("Prediction says the flower type Is", type)
-
         break
 
