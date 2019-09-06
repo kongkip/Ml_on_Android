@@ -11,3 +11,5 @@ This is an example of an interactive Python console script running in an Android
 * The Chaquopy configuration (Python version, pip requirements list, etc.) is in 
   [`app/build.gradle`](https://github.com/chaquo/chaquopy-console/blob/master/app/build.gradle).
 # Ml_on_Android
+
+![demo](https://github.com/kongkip/Ml_on_Android/blob/master/video/ml_on_android.avi)
